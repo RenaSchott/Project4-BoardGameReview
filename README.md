@@ -233,7 +233,7 @@ Inspirations for specific problems were taken from the following websites:
   
 ### Media
 
-- no media was used
+Images were downloaded from <https://pixabay.com/de/>
 
 
 ## Acknowledgements
