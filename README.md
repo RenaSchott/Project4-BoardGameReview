@@ -74,6 +74,7 @@ Here is the previously outlined flow chart, which contains parts of the actual p
 
 #### POC (prove of concept)
 
+- Register
 - Log in and out
 - Uploading/Deleting image
 - Adding comments
@@ -85,6 +86,7 @@ Here is the previously outlined flow chart, which contains parts of the actual p
 
 - Interacting with an existing entry
     - Commenting on an entry
+- Create new account
 - Logging in and out of the page
     - Making a new entry
         - Adding an image of a board game
@@ -120,13 +122,17 @@ There is the possibility to integrate:
 
 - **V2 (version 2)**
     - Rating system 
-        - divided up for each year
-        - divided into complexity
-        - divided into family, connoisseur and expert board game
+        - Divided up for each year
+        - Divided into complexity
+        - Divided into family, connoisseur and expert board game
     - Images 
-        - expand upload capacity
+        - Expand upload capacity
     - Adding chat/message function
     - Adding extra forum for further exchange
+    - Edit own account
+        - Personal data
+        - Upload personal image
+        - Delete Account
 
 ## Used Technologies
 
