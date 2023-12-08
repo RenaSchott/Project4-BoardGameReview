@@ -234,6 +234,7 @@ Inspirations for specific problems were taken from the following websites:
 ### Media
 
 Images were downloaded from <https://pixabay.com/de/>
+- Login image <https://pixabay.com/de/illustrations/schach-hunde-haustier-schach-spiel-7802136/>
 
 
 ## Acknowledgements
