@@ -132,12 +132,13 @@ There is the possibility to integrate:
 
 ### Languages Used
 
-- Python
+- HTML, CSS, Python, Jinja
 
 ### Framework, Libraries and Programs
 
 - Frameworks 
     - Django
+    - Bootstrap
 - Libraries 
     - 
 - Moduls
