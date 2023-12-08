@@ -224,7 +224,7 @@ The link to the live page can be found here: [] (<>)
 
 ### Content
 
-The content of this project was inspired by the Love Sandwiches project and the content of the course. In general, the following websites were used for inspiration:
+The content of this project was inspired by the "Hello Django" and "I Think Therefore I Blog" project and the content of the course. In general, the following websites were used for inspiration:
   - <>
   
 
