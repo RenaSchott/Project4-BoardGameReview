@@ -59,16 +59,44 @@ The site wants to challenge the user to .
 
 ### Wireframes
 
-Here are the drawings of the wireframes:
+Here are the drawings of the wireframes for the browsers and for smartphones:
 
-![]()
+**Homepage:**
+![Drawing of the homepage](read-me-images/wireframe5.png)
+![Drawing of the homepage](read-me-images/wireframe6.png)
+
+**Register:**
+![Drawing of the register page](read-me-images/wireframe3.png)
+![Drawing of the register page](read-me-images/wireframe4.png)
+
+**Log In:**
+![Drawing of the log in page](read-me-images/wireframe1.png)
+![Drawing of the log in page](read-me-images/wireframe2.png)
+
+**Personal user page:**
+![Drawing of the personal user page](read-me-images/wireframe11.png)
+![Drawing of the personal user page](read-me-images/wireframe12.png)
+
+**Add review:**
+![Drawing of the add review page](read-me-images/wireframe9.png)
+![Drawing of the add review page](read-me-images/wireframe10.png)
+
+**Add comment:**
+![Drawing of the add comment page](read-me-images/wireframe7.png)
+![Drawing of the add comment page](read-me-images/wireframe8.png)
 
 
 ### Flow Chart
 
-Here is the previously outlined flow chart, which contains parts of the actual project and of version 2:
+Here is the outlined flow chart:
 
-![]()
+![Drawn flowchart of the project](read-me-images/flowchart_P4.png)
+
+### Entity Relationship Diagram
+
+Here is the outlined ERD:
+
+![Drawn entity relationship diagram of the project](read-me-images/erd_P4.png)
 
 ### Method
 
