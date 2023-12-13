@@ -11,17 +11,19 @@ View the live project here: <>
   - [Table of content](#table-of-content)
   - [UX](#ux)
     - [Site owner goals](#site-owner-goals)
-    - [User stories](#user-stories)
-      - [As a visitor](#as-a-visitor)
-      - [As the administrator](#as-the-administrator)
-      - [As the developer](#as-the-developer)
-    - [Wireframes](#wireframes)
-    - [Flow Chart](#flow-chart)
-  - [Method](#method)
-    - [POC (prove of concept)](#poc-(prove-of-concept))
-    - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
-  - [Tasks in product backlog (with (untested) storypoints)] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
-  - [Features](#features)
+    - [Agile planning](#agile-planning)
+      - [Milestones](#milestones)
+      - [User stories](#user-stories)
+        - [As a visitor](#as-a-visitor)
+        - [As the administrator](#as-the-administrator)
+        - [As the developer](#as-the-developer)
+      - [Wireframes](#wireframes)
+      - [Flow Chart](#flow-chart)
+      - [Method](#method)
+        - [POC (prove of concept)](#poc-(prove-of-concept))
+        - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
+      - [Tasks in product backlog (with (untested) storypoints)] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
+    - [Features](#features)
     - [Welcome screen](#welcome-screen)
     - [Username](#username)
     - [Game rules](#game-rules)
@@ -53,15 +55,26 @@ Therefore I set my website owner goals as followed:
 - Within the first six month I want to have reviews of at least 500 different board games on the website.
 - Each month I want to have at least 100 persons visiting my website.
 
-### User stories
+### Agile planning
 
-#### As the developer
+#### Milestones
+- **1-Preparation:** Done is all preparation as user stories, set up etc.
+- **2-Create landing page:** Create the first page of the homepage
+- **3-Make landing page interactive:** Add search bar, comments, and open review option
+- **4-Accounts:** Create option to make and account and log in and out
+- **5-Review:** Make it possible to review existing and new board games
+- **6-Admin:** Make it possible for the administratot to delete, edit and add content
+There is no final deployment milestone since the deployment started as early as possible to avaid mistakes in early steps.
+
+#### User stories
+
+##### As the developer
 - **Preparation:** As a **developer** I need to **setup my project** so **I can create work on it.** 
   - **Acceptance Criteria:**
     - Coding is about to start 
     - Readme file is up to date
 
-#### As a visitor
+##### As a visitor
 
 - **View newest reviews:**  As a **Site User** I can **view the reviews on the starting page** so that **I can select a specific one to read.**
   - **Acceptance Criteria:**
@@ -115,7 +128,7 @@ Therefore I set my website owner goals as followed:
     - form opens
     - editing is shown
 
-#### As the administrator
+##### As the administrator
 
 - **Manage comments/reviews:** As **the Admin** I can **manage the comments and reviews** so that **I can make sure that the site contributes to the grows of the community in a friendly and social way.**
   - **Acceptance Criteria:**
@@ -124,7 +137,7 @@ Therefore I set my website owner goals as followed:
     - complete deletion and part deletion is possible
     - editing is possible
 
-### Wireframes
+#### Wireframes
 
 Here are the drawings of the wireframes for the browsers and for smartphones:
 
@@ -153,21 +166,21 @@ Here are the drawings of the wireframes for the browsers and for smartphones:
 ![Drawing of the add comment page](read-me-images/wireframe8.png)
 
 
-### Flow Chart
+#### Flow Chart
 
 Here is the outlined flow chart:
 
 ![Drawn flowchart of the project](read-me-images/flowchart_P4.png)
 
-### Entity Relationship Diagram
+#### Entity Relationship Diagram
 
 Here is the outlined ERD:
 
 ![Drawn entity relationship diagram of the project](read-me-images/erd_P4.png)
 
-### Method
+#### Method
 
-#### POC (prove of concept)
+##### POC (prove of concept)
 
 - Register
 - Log in and out
@@ -177,7 +190,7 @@ Here is the outlined ERD:
 - Editing reviews
 - Rating system
 
-#### MVP (minimum viable product)
+##### MVP (minimum viable product)
 
 - Interacting with an existing entry
     - Commenting on an entry
@@ -196,7 +209,7 @@ Here is the outlined ERD:
         - Rating the board game 
 
 
-### Tasks in product backlog (with (untested) storypoints):
+#### Tasks in product backlog (with (untested) storypoints)
 - **Userstory 1 - Preparation:**
   - Task 1: Setup workspace
   - Task 2: Create User Stories with acceptance criteria, Storypoints and Tasks
