@@ -43,19 +43,32 @@ View the live project here: <>
 
 ## UX
 
-### Site goals
+### Website owner goals
 
-The site wants to challenge the user to .
+As the owner of the website I want to create a contribution to the community by giving them another place to share their opinions on board games.
+Therefore I set my website owner goals as followed:
+- Within the first two month I want to get 100 registrations of users who created at least one review.
+- Within the first six month I want to have reviews of at least 500 different board games on the website.
+- Each month I want to have at least 100 persons visiting my website.
 
 ### User stories
 
 #### As a visitor
 
-- 
+- **View newest reviews:**  As a **Site User** I can **view the reviews on the starting page** so that **I can select a specific one to read.**
+- **Open a review:** As a **Site User** I can **open a review** so that **I can read the full text.**
+- **View ratings:** As a **Site User** I can **view the ratings on the starting page** so that **I can get an impression of the specific board game.**
+- **Search:** As a **Site User** I can **use the search bar** so that **I can look for a specific board game.**
+- **View comments:** As a **Site User** I can **view the comments of other people** so that **I can get to know their opinion on the review.**
+- **Comment on a review:** As a **Site User** I can **comment on a review** so that **I can share my opinion on that.**
+- **Account registration:** As a **Site User** I can **register an account** so that **I can add reviews and ratings.**
+- **Create new reviews/ratings:** As a **Site User** I can **create new reviews and ratings** so that **I can contribute to the sites grows.**
+- **Add my own review/ratings:** As a **Site User** I can **add my own reviews and ratings on already reviewed board games** so that **I can share my personal opinion.**
+- **Manage reviews:** As a **Site User** I can **create, read, update and delete my reviews** so that **I can manage my contents.**
 
 #### As the administrator
 
-- 
+- **Manage comments/reviews:** As **the Admin** I can **manage the comments and reviews** so that **I can make sure that the site contributes to the grows of the community in a friendly and social way.**
 
 ### Wireframes
 
@@ -127,6 +140,59 @@ Here is the outlined ERD:
     - Interacting with other entries
         - Writing own review
         - Rating the board game 
+
+
+### Tasks in product backlog (with (untested) storypoints):
+- **Userstory 1 - View newest reviews:** 
+  - Task 1: Create HTML + CSS --- Storypoint/s: 2
+  - Task 2: Create the models --- Storypoint/s: 1
+  - Task 3: Testing --- Storypoint/s: 2
+- **Userstory 2 - Open a review:**
+  - Task 1: Create HTML + CSS --- Storypoint/s: 2
+  - Task 2: Create the models --- Storypoint/s: 1
+  - Task 3: Testing --- Storypoint/s: 2
+- **Userstory 3 - View ratings:**
+  - Task 1: Create HTML + CSS --- Storypoint/s: 2
+  - Task 2: Create the models --- Storypoint/s: 1
+  - Task 3: Testing --- Storypoint/s: 2
+- **Userstory 4 – Search:**
+  - Task 1: Create HTML + CSS --- Storypoint/s: 1
+  - Task 2: Create the models --- Storypoint/s: 1
+  - Task 3: Testing --- Storypoint/s: 2
+- **Userstory 5 - View comments:**
+  - Task 1: Create HTML + CSS --- Storypoint/s: 1
+  - Task 2: Create the models --- Storypoint/s: 1
+  - Task 3: Testing --- Storypoint/s: 2
+- **Userstory 6 - Comment on a review:**
+  - Task 1: Design User Interface --- Storypoint/s: 4
+  - Task 2: Create HTML + CSS --- Storypoint/s: 2
+  - Task 3: Create the models --- Storypoint/s: 1
+  - Task 4: Testing --- Storypoint/s: 2
+- **Userstory 7 - Account registration:**
+  - Task 1: Design User Interface --- Storypoint/s: 8
+  - Task 2: Create HTML + CSS --- Storypoint/s: 4
+  - Task 3: Create the models --- Storypoint/s: 2
+  - Task 4: Testing --- Storypoint/s: 1
+- **Userstory 8 - Create new reviews/ratings:**
+  - Task 1: Design User Interface --- Storypoint/s: 16
+  - Task 2: Create HTML + CSS --- Storypoint/s: 8
+  - Task 3: Create the models --- Storypoint/s: 4
+  - Task 4: Testing --- Storypoint/s: 4
+- **Userstory 9 - Add my own review/ratings:**
+  - Task 1: Design User Interface --- Storypoint/s: 8
+  - Task 2: Create HTML + CSS --- Storypoint/s: 4
+  - Task 3: Create the models --- Storypoint/s: 4
+  - Task 4: Testing --- Storypoint/s: 4
+- **Userstory 10 - Manage reviews:**
+  - Task 1: Design User Interface --- Storypoint/s: 16
+  - Task 2: Create HTML + CSS --- Storypoint/s: 8
+  - Task 3: Create the models --- Storypoint/s: 8
+  - Task 4: Testing --- Storypoint/s: 4
+- **Userstory 11 - Manage comments/reviews:**
+  - Task 1: Design User Interface --- Storypoint/s: 32
+  - Task 2: Create HTML + CSS --- Storypoint/s: 16
+  - Task 3: Create the models --- Storypoint/s: 8
+  - Task 4: Testing --- Storypoint/s: 8
 
 
 ## Features
