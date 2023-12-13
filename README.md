@@ -10,7 +10,7 @@ View the live project here: <>
 - [Battleship](#battleship)
   - [Table of content](#table-of-content)
   - [UX](#ux)
-    - [Site goals](#site-goals)
+    - [Site owner goals](#site-owner-goals)
     - [User stories](#user-stories)
       - [As a visitor](#as-a-visitor)
       - [As the administrator](#as-the-administrator)
@@ -19,6 +19,7 @@ View the live project here: <>
   - [Method](#method)
     - [POC (prove of concept)](#poc-(prove-of-concept))
     - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
+  - [Tasks in product backlog (with (untested) storypoints)] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
   - [Features](#features)
     - [Welcome screen](#welcome-screen)
     - [Username](#username)
@@ -56,19 +57,65 @@ Therefore I set my website owner goals as followed:
 #### As a visitor
 
 - **View newest reviews:**  As a **Site User** I can **view the reviews on the starting page** so that **I can select a specific one to read.**
+  - **Acceptance Criteria:**
+    - homepage is styled and structured
+    -  page is scrollable
+
 - **Open a review:** As a **Site User** I can **open a review** so that **I can read the full text.**
+  - **Acceptance Criteria:**
+    - An expand button is showing
+    - button is clickable
+    - full review is showing
+    - site is scrollable
 - **View ratings:** As a **Site User** I can **view the ratings on the starting page** so that **I can get an impression of the specific board game.**
+  - **Acceptance Criteria:**
+    - homepage is styled and structured
+    - ratings are shown
 - **Search:** As a **Site User** I can **use the search bar** so that **I can look for a specific board game.**
+  - **Acceptance Criteria:**
+    - in to top left a search bar is shown
+    - search results will be displayed
 - **View comments:** As a **Site User** I can **view the comments of other people** so that **I can get to know their opinion on the review.**
+  - **Acceptance Criteria:**
+    - number of comments is shown on homepage
+    - button is clickable
+    - all existingcomments are shown 
 - **Comment on a review:** As a **Site User** I can **comment on a review** so that **I can share my opinion on that.**
+  - **Acceptance Criteria:**
+    - Clickable button is shown on website
+    - form is opening
+    - comment is addable
 - **Account registration:** As a **Site User** I can **register an account** so that **I can add reviews and ratings.**
+  - **Acceptance Criteria:**
+    - Clickable button exists on homepage
+    - form opens
+    - registration is possible
 - **Create new reviews/ratings:** As a **Site User** I can **create new reviews and ratings** so that **I can contribute to the sites grows.**
+  - **Acceptance Criteria:**
+    - Button is clickable 
+    - form is opening
+    - review and rating is added
 - **Add my own review/ratings:** As a **Site User** I can **add my own reviews and ratings on already reviewed board games** so that **I can share my personal opinion.**
+  - **Acceptance Criteria:**
+    - Button is clickable 
+    - form is opening
+    - image can be added
+    - review and rating is added
 - **Manage reviews:** As a **Site User** I can **create, read, update and delete my reviews** so that **I can manage my contents.**
+  - **Acceptance Criteria:**
+    - reviews/ratings are shown on personal site
+    - button is clickable
+    - form opens
+    - editing is shown
 
 #### As the administrator
 
 - **Manage comments/reviews:** As **the Admin** I can **manage the comments and reviews** so that **I can make sure that the site contributes to the grows of the community in a friendly and social way.**
+  - **Acceptance Criteria:**
+    - an overview of the reviews and comments is shown
+    - page is scrollable
+    - complete deletion and part deletion is possible
+    - editing is possible
 
 ### Wireframes
 
