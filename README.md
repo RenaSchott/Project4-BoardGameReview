@@ -14,6 +14,7 @@ View the live project here: <>
     - [User stories](#user-stories)
       - [As a visitor](#as-a-visitor)
       - [As the administrator](#as-the-administrator)
+      - [As the developer](#as-the-developer)
     - [Wireframes](#wireframes)
     - [Flow Chart](#flow-chart)
   - [Method](#method)
@@ -53,6 +54,12 @@ Therefore I set my website owner goals as followed:
 - Each month I want to have at least 100 persons visiting my website.
 
 ### User stories
+
+#### As the developer
+- **Preparation:** As a **developer** I need to **setup my project** so **I can create work on it.** 
+  - **Acceptance Criteria:**
+    - Coding is about to start 
+    - Readme file is up to date
 
 #### As a visitor
 
@@ -190,52 +197,58 @@ Here is the outlined ERD:
 
 
 ### Tasks in product backlog (with (untested) storypoints):
-- **Userstory 1 - View newest reviews:** 
+- **Userstory 1 - Preparation:**
+  - Task 1: Setup workspace
+  - Task 2: Create User Stories with acceptance criteria, Storypoints and Tasks
+  - Task 3: Create Wireframes
+  - Task 4: Create Flowchart
+  - Task 5: Create Entity Relatioship Diagram
+- **Userstory 2 - View newest reviews:** 
   - Task 1: Create HTML + CSS --- Storypoint/s: 2
   - Task 2: Create the models --- Storypoint/s: 1
   - Task 3: Testing --- Storypoint/s: 2
-- **Userstory 2 - Open a review:**
+- **Userstory 3 - Open a review:**
   - Task 1: Create HTML + CSS --- Storypoint/s: 2
   - Task 2: Create the models --- Storypoint/s: 1
   - Task 3: Testing --- Storypoint/s: 2
-- **Userstory 3 - View ratings:**
+- **Userstory 4 - View ratings:**
   - Task 1: Create HTML + CSS --- Storypoint/s: 2
   - Task 2: Create the models --- Storypoint/s: 1
   - Task 3: Testing --- Storypoint/s: 2
-- **Userstory 4 – Search:**
+- **Userstory 5 – Search:**
   - Task 1: Create HTML + CSS --- Storypoint/s: 1
   - Task 2: Create the models --- Storypoint/s: 1
   - Task 3: Testing --- Storypoint/s: 2
-- **Userstory 5 - View comments:**
+- **Userstory 6 - View comments:**
   - Task 1: Create HTML + CSS --- Storypoint/s: 1
   - Task 2: Create the models --- Storypoint/s: 1
   - Task 3: Testing --- Storypoint/s: 2
-- **Userstory 6 - Comment on a review:**
+- **Userstory 7 - Comment on a review:**
   - Task 1: Design User Interface --- Storypoint/s: 4
   - Task 2: Create HTML + CSS --- Storypoint/s: 2
   - Task 3: Create the models --- Storypoint/s: 1
   - Task 4: Testing --- Storypoint/s: 2
-- **Userstory 7 - Account registration:**
+- **Userstory 8 - Account registration:**
   - Task 1: Design User Interface --- Storypoint/s: 8
   - Task 2: Create HTML + CSS --- Storypoint/s: 4
   - Task 3: Create the models --- Storypoint/s: 2
   - Task 4: Testing --- Storypoint/s: 1
-- **Userstory 8 - Create new reviews/ratings:**
+- **Userstory 9 - Create new reviews/ratings:**
   - Task 1: Design User Interface --- Storypoint/s: 16
   - Task 2: Create HTML + CSS --- Storypoint/s: 8
   - Task 3: Create the models --- Storypoint/s: 4
   - Task 4: Testing --- Storypoint/s: 4
-- **Userstory 9 - Add my own review/ratings:**
+- **Userstory 10 - Add my own review/ratings:**
   - Task 1: Design User Interface --- Storypoint/s: 8
   - Task 2: Create HTML + CSS --- Storypoint/s: 4
   - Task 3: Create the models --- Storypoint/s: 4
   - Task 4: Testing --- Storypoint/s: 4
-- **Userstory 10 - Manage reviews:**
+- **Userstory 11 - Manage reviews:**
   - Task 1: Design User Interface --- Storypoint/s: 16
   - Task 2: Create HTML + CSS --- Storypoint/s: 8
   - Task 3: Create the models --- Storypoint/s: 8
   - Task 4: Testing --- Storypoint/s: 4
-- **Userstory 11 - Manage comments/reviews:**
+- **Userstory 12 - Manage comments/reviews:**
   - Task 1: Design User Interface --- Storypoint/s: 32
   - Task 2: Create HTML + CSS --- Storypoint/s: 16
   - Task 3: Create the models --- Storypoint/s: 8
