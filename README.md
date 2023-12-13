@@ -154,6 +154,8 @@ There is the possibility to integrate:
         - was used to create the wireframes
     - Lucidchart
         - was used to create the flow chart
+    - dbdiagram
+        - was used to create the entity relationship diagram
     - GitHub
         - was used to store the project site
     - Gitpod
