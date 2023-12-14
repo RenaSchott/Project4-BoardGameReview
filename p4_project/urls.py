@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from bg_review import views as index_views
+# from bg_review import views as index_views
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
+    # path('', index_views.index, name='index'),
     path('admin/', admin.site.urls),
 ]
