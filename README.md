@@ -57,8 +57,16 @@ Therefore I set my website owner goals as followed:
 
 ### Agile planning
 
+THe development of this project was done with an agile approach.
+....
+
+Here is an example of the Kanban board from an early development stage:
+![Example of the Kanban board in an early stage](read-me-images/kanban.png)
+
+The project board can be found here: <https://github.com/users/RenaSchott/projects/3>.
+
 #### Milestones
-- **1-Preparation:** Done is all preparation as user stories, set up etc.
+- **1-Preparation:** Make the preparation for the project as for example user stories, set up, deployment etc.
 - **2-Create landing page:** Create the first page of the homepage
 - **3-Make landing page interactive:** Add search bar, comments, and open review option
 - **4-Accounts:** Create option to make and account and log in and out
@@ -66,13 +74,18 @@ Therefore I set my website owner goals as followed:
 - **6-Admin:** Make it possible for the administratot to delete, edit and add content
 There is no final deployment milestone since the deployment started as early as possible to avaid mistakes in early steps.
 
+The milestones can be found here <https://github.com/RenaSchott/Project4-BoardGameReview/milestones>.
+
 #### User stories
+
+The user stories can be found here <https://github.com/RenaSchott/Project4-BoardGameReview/issues>.
 
 ##### As the developer
 - **Preparation:** As a **developer** I need to **setup my project** so **I can create work on it.** 
   - **Acceptance Criteria:**
     - Coding is about to start 
     - Readme file is up to date
+    - Deploy project
 
 ##### As a visitor
 
@@ -210,12 +223,16 @@ Here is the outlined ERD:
 
 
 #### Tasks in product backlog (with (untested) storypoints)
+
+The tasks can be found within the user stories here: <https://github.com/RenaSchott/Project4-BoardGameReview/issues>.
+
 - **Userstory 1 - Preparation:**
   - Task 1: Setup workspace
   - Task 2: Create User Stories with acceptance criteria, Storypoints and Tasks
   - Task 3: Create Wireframes
   - Task 4: Create Flowchart
   - Task 5: Create Entity Relatioship Diagram
+  - Task 6: Deploy project (ElephantSQL + Heroku)
 - **Userstory 2 - View newest reviews:** 
   - Task 1: Create HTML + CSS --- Storypoint/s: 2
   - Task 2: Create the models --- Storypoint/s: 1
@@ -329,6 +346,8 @@ There is the possibility to integrate:
         - was used to write the code and commit it to GitHub
     - Heroku 
         - was used to deploy the project 
+    - ElephantSQL
+        - was used for storing the database    
     - CI Python Linter
         - was used for finding errors
     - Languagetool
