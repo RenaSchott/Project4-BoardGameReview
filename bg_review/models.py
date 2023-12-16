@@ -6,7 +6,7 @@ import???
 
 
 # Model for board games 
-class Board_game(models.Model):
+class BoardGame(models.Model):
     bg_id = 
     bg_name = models.CharField(max_length=200, unique=True) 
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="")
