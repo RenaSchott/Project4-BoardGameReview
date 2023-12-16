@@ -13,6 +13,10 @@ class BoardGame(models.Model):
     created_on = models.DateTimeFirls(auto_now_add=True)
 
 
+def __str__(self):
+        return self.bg_name
+
+
 # Model for reviews
 class Review(models.Model):
     title = models.CharField(max_length=200, unique=True) 
@@ -23,6 +27,10 @@ class Review(models.Model):
     rating = models.ForeignKey(rating, on_delete=models.RESTRICT, related_name="review-rating")
 
 
+def __str__(self):
+        return self.title
+
+
 # Model for comment
 class Comment(models.Model):
     content = models.TextField()
@@ -31,10 +39,19 @@ class Comment(models.Model):
     review_id = models.ForeignKey
 
 
+ def __str__(self):
+        return f"Comment added to {self.review_id}"
+
+
 # Model for rating
 class Rating(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="user-rating")
     rating = models.IntegerField(choices=1-10)
     review_id = models.ForeignKey
+
+
+def __str__(self):
+        return self.rating
+
 
 # Model for users
