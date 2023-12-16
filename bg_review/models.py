@@ -6,7 +6,7 @@ import???
 
 
 # Model for board games 
-class board_game(models.Model):
+class Board_game(models.Model):
     bg_id = 
     bg_name = models.CharField(max_length=200, unique=True) 
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="")
@@ -14,7 +14,7 @@ class board_game(models.Model):
 
 
 # Model for reviews
-class review(models.Model):
+class Review(models.Model):
     title = models.CharField(max_length=200, unique=True) 
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="")
     bg_name = models.ForeignKey(bg_name, on_delete=models.CASCADE, related_name="")
@@ -24,7 +24,7 @@ class review(models.Model):
 
 
 # Model for comment
-class comment(models.Model):
+class Comment(models.Model):
     content = models.TextField()
     created_on = models.DateTimeFirls(auto_now_add=True)
     guest = models.CharField(max_length=200, unique=True) 
@@ -32,7 +32,7 @@ class comment(models.Model):
 
 
 # Model for rating
-class rating(models.Model):
+class Rating(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="")
     rating = models.IntegerField(choices=1-10)
     review_id = models.ForeignKey
