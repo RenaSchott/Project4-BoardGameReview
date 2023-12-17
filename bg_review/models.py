@@ -70,6 +70,9 @@ def __str__(self):
 
 # Model for users
 class User(models.Model):
+    """
+    Stores a single user of the site
+    """
     first_name = models.CharField("person's first name", max_length=30)
     last_name =  models.CharField("person's last name", max_length=30)
     email = = models.EmailField(max_length = 254)
