@@ -21,5 +21,5 @@ from bg_review import views
 urlpatterns = [
     # path('', index_views.index, name='index'),
     path('admin/', admin.site.urls),
-    path('home/', home, name='home')
+    path('', include("bg_review.urls")),
 ]

@@ -419,7 +419,7 @@ The link to the live page can be found here: [] (<>)
 ### Content
 
 The content of this project was inspired by the "Hello Django" and "I Think Therefore I Blog" project and the content of the course. In general, the following websites were used for inspiration:
-  - <>
+  - <https://www.youtube.com/watch?v=sm1mokevMWk>
   
 
 Inspirations for specific problems were taken from the following websites:
