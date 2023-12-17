@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-renaschott-project4boar-dzxjypnf1n8.ws-eu106.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-renaschott-project4boar-282ppsybk1e.ws-eu107.gitpod.io', '.herokuapp.com']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bg_review.wsgi.application'
+WSGI_APPLICATION = 'p4_project.wsgi.application'
 
 
 # Database
