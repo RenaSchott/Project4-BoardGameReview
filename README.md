@@ -420,7 +420,7 @@ The link to the live page can be found here: [] (<>)
 
 The content of this project was inspired by the "Hello Django" and "I Think Therefore I Blog" project and the content of the course. In general, the following websites were used for inspiration:
   - <https://www.youtube.com/watch?v=sm1mokevMWk>
-  - <https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page>
+  - <https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/>
   
 
 Inspirations for specific problems were taken from the following websites:
