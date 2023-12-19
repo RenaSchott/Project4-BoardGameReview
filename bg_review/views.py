@@ -7,13 +7,11 @@ from .models import BoardGame, Review, Rating, Comment, User
 # Create your views here.
 #homepage
 def home(request):
-    return render(request, 'index.html')
+    reviews = Review.objects.all()
+    return render(request, 'index.html', {'reviews':reviews})
 
 
 #specific board game review
-def boardgame(request, id):
-    ls = Review.objects.get(id=id)
-    bg_review = ls.review_set.all()
-    bg_rating = ls.rating_set.all()
-    bg_comment = ls.comment_set.all()
-    return render(request, '' %(ls.name, review.title, rating.rating. comment.content))
+def reviews(request, id):
+    review = Review.objects.get(id=id)
+    return render(request, 'review.html', {'review':review})
