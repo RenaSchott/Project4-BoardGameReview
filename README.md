@@ -426,6 +426,7 @@ The content of this project was inspired by the "Hello Django" and "I Think Ther
 Inspirations for specific problems were taken from the following websites:
   - <https://docs.djangoproject.com/en/4.2/topics/db/models/>
   - <https://www.geeksforgeeks.org/emailfield-django-models/>
+  - <https://www.makeuseof.com/django-dynamic-routing/>
   
 ### Media
 
