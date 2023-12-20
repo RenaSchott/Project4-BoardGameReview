@@ -427,6 +427,8 @@ Inspirations for specific problems were taken from the following websites:
   - <https://docs.djangoproject.com/en/4.2/topics/db/models/>
   - <https://www.geeksforgeeks.org/emailfield-django-models/>
   - <https://www.makeuseof.com/django-dynamic-routing/>
+  - <https://mdbootstrap.com/how-to/bootstrap/footer-at-bottom/>
+  - <https://getbootstrap.com/docs/5.0/utilities/text/>
   
 ### Media
 
