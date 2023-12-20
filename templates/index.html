@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello World</h1>
+<div class="main">
+    <div>
+        <h1>Hello Board Gamers! Welcome to our review page!</h1>
+        <p>Here everyone is welcomed to contribute according to our community standards of respect and a friendly with each other.</p>    
+    </div>
+    
+    <div class="sep-line"></div>
+    
+    <div class="image-container">
+        {% if "placeholder" in boardgame.bg_image.url %}
+        <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+          alt="placeholder image">
+        {% else %}
+        <img class="card-img-top" src=" {{ boardgame.bg_image.url }}"
+          alt="{{ boardgame.title }}">
+        {% endif %}
+    </div>
+</div>
+
 
 {%endblock%}
