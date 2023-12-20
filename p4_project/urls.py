@@ -22,4 +22,5 @@ urlpatterns = [
     # path('', index_views.index, name='index'),
     path('admin/', admin.site.urls),
     path('', include('bg_review.urls')),
+    path('review/', include('bg_review.urls')),
 ]

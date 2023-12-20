@@ -12,6 +12,6 @@ def home(request):
 
 
 #specific board game review
-def reviews(request, id):
+def review(request, id):
     review = Review.objects.get(id=id)
     return render(request, 'review.html', {'review':review})
