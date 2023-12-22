@@ -9,7 +9,7 @@ div {
     background-color: blue;
 }
 
-#sep-line {
+.sep-line {
     background-color: rgb(71, 17, 17);
     width: 100%;
     height: 20px;
