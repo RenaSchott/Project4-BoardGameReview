@@ -434,7 +434,9 @@ Inspirations for specific problems were taken from the following websites:
 
 Images were downloaded from <https://pixabay.com/de/>
 - Login image <https://pixabay.com/de/illustrations/schach-hunde-haustier-schach-spiel-7802136/>
-
+- Carcassonne: <https://pixabay.com/de/illustrations/brettspiel-brett-spiel-spiele-2237460/>
+- Ludo: <https://pixabay.com/de/vectors/brett-spiel-ludo-freizeit-gl%C3%BCck-48117/>
+- Chess: <https://pixabay.com/de/illustrations/schach-strategie-spiel-k%C3%B6nig-brett-1709603/>
 
 ## Acknowledgements
 
