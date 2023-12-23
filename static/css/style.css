@@ -16,7 +16,8 @@
 
 #sep-line {
     background-color: rgba(71, 17, 17, 0.5);
-    width: 100%;
+    width: 80%;
     height: 10px;
-    margin: 10px 0;
+    margin: 10px auto;
+    text-align: center;
 }
