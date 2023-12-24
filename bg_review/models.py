@@ -62,6 +62,8 @@ class Comment(models.Model):
     guest = models.CharField(max_length=200, unique=True) 
     blog = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="blog")
 
+    objects = models.Manager()
+
 
 def __str__(self):
     return f"Comment added to {self.review_id}"
