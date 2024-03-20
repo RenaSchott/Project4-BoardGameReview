@@ -22,7 +22,7 @@ View the live project here: <>
       - [Method](#method)
         - [POC (prove of concept)](#poc-(prove-of-concept))
         - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
-      - [Tasks in product backlog (with (untested) storypoints)] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
+      - [Tasks] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
     - [Features](#features)
     - [Welcome screen](#welcome-screen)
     - [Username](#username)
