@@ -19,7 +19,7 @@ from django.urls import path, include
 from bg_review import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('bg_review.urls')),
     path('review/', include('bg_review.urls')),
+    path('admin/', admin.site.urls),
 ]

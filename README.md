@@ -22,7 +22,7 @@ View the live project here: <>
       - [Method](#method)
         - [POC (prove of concept)](#poc-(prove-of-concept))
         - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
-      - [Tasks] (#tasks-in-procduct-backlog-(with-(untested))-storypoints)
+      - [Tasks] (#tasks)
     - [Features](#features)
     - [Welcome screen](#welcome-screen)
     - [Username](#username)
@@ -222,7 +222,8 @@ Here is the outlined ERD:
         - Rating the board game 
 
 
-#### Tasks in product backlog (with (untested) storypoints)
+#### Tasks
+**In product backlog (with (untested) storypoints)**
 
 The tasks can be found within the user stories here: <https://github.com/RenaSchott/Project4-BoardGameReview/issues>.
 
