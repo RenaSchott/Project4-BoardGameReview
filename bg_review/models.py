@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.crypto import get_random_string
 #from cloudinary.models import CloudinaryField
 
 
-# Model for admin
-
+STATUS = ((0, "Draft"), (1, "Published"))
 
 # Model for board games 
 class BoardGame(models.Model):
@@ -26,11 +26,13 @@ class Review(models.Model):
     """ 
     Stores a single review for a specific board game entry
     """
-    title = models.CharField(max_length=200, unique=True) 
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, default=get_random_string(length=200))
     author = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="author")
     bg_name = models.ForeignKey(BoardGame, on_delete=models.CASCADE, related_name="bg")
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
 
 
 def __str__(self):
