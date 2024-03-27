@@ -33,6 +33,8 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
 
 
 def __str__(self):
@@ -44,7 +46,7 @@ class Rating(models.Model):
     """ 
     Stores a single rating for a specific review entry
     """
-    user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="rating")
+    visitor = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="visitor", default=get_random_string(length=200))
     rating = [("0", "0"), ("0.5", "0.5"), ("1", "1"), ("1.5", "1.5"), ("2", "2"), ("2.5", "2.5"), ("3", "3"), ("3.5", "3.5"), ("4", "4"), ("4.5", "4.5"), ("5", "5"), ("5.5", "5.5"), ("6", "6"), ("6.5", "6.5"), ("7", "7"), ("7.5", "7.5"), ("8", "8"), ("8.5", "8.5"), ("9", "9"), ("9.5", "9.5"), ("10", "10")]
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="review")
     help_text = "Please rate the board game from  0 = horrible board game to 10 = fantastic board game."
@@ -54,8 +56,8 @@ def __str__(self):
         return self.rating
 
 
-# Model for comment
-class Comment(models.Model):
+# Model for guest comments
+class CommentGuest(models.Model):
     """ 
     Stores a single comment for a specific review entry
     """
@@ -63,6 +65,8 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     guest = models.CharField(max_length=200, unique=True) 
     blog = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="blog")
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
 
     objects = models.Manager()
 
@@ -71,16 +75,21 @@ def __str__(self):
     return f"Comment added to {self.review_id}"
 
 
-
-
-
-# Model for users
-class User(models.Model):
+# Model for user comments
+class CommentUser(models.Model):
+    """ 
+    Stores a single comment for a specific review entry
     """
-    Stores a single user of the site
-    """
-    user_name = models.CharField("person's user name", max_length=30)
-    first_name = models.CharField("person's first name", max_length=30)
-    last_name =  models.CharField("person's last name", max_length=30)
-    email = models.EmailField(max_length = 254)
-    #password =
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    writer = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="writer")
+    comment = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="comment")
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
+
+    objects = models.Manager()
+
+
+def __str__(self):
+    return f"Comment added to {self.review_id}"
+

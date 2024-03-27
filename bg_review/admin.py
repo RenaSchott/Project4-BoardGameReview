@@ -1,6 +1,6 @@
 # Register your models here.
 from django.contrib import admin
-from .models import BoardGame, Review, Rating, Comment, User
+from .models import BoardGame, Review, Rating, CommentUser, CommentGuest
 
 
 @admin.register(BoardGame)
@@ -21,7 +21,7 @@ class ReviewAdmin(admin.ModelAdmin):
     field filters.
     """
     list_display = ('title', 'author', 'bg_name', 'created_on', 'content')
-    list_filter = ('author', 'created_on')
+    list_filter = ('author', 'created_on', 'approved')
     search_fields = ['author', 'bg_name']
 
 
@@ -31,28 +31,31 @@ class RatingAdmin(admin.ModelAdmin):
     Lists fields for display in admin, fields for search,
     field filters.
     """
-    list_display = ('user', 'rating', 'review', 'help_text')
-    list_filter = ('user', 'review')
-    search_fields = ['user', 'rating']
+    list_display = ('visitor', 'rating', 'review', 'help_text')
+    list_filter = ('visitor', 'review')
+    search_fields = ['visitor', 'rating']
 
 
-@admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+@admin.register(CommentUser)
+class CommentUserAdmin(admin.ModelAdmin):
     """
     Lists fields for display in admin, fields for search,
     field filters.
     """
-    list_display = ('content', 'created_on', 'guest', 'blog')
-    list_filter = ('blog', 'created_on')
+    list_display = ('content', 'created_on', 'writer', 'comment', 'updated_on', 'approved')
+    list_filter = ('comment', 'created_on', 'approved')
+    search_fields = ['comment']
+
+
+@admin.register(CommentGuest)
+class CommentGuestAdmin(admin.ModelAdmin):
+    """
+    Lists fields for display in admin, fields for search,
+    field filters.
+    """
+    list_display = ('content', 'created_on', 'guest', 'blog', 'updated_on', 'approved')
+    list_filter = ('blog', 'created_on', 'approved')
     search_fields = ['blog']
-
-
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    """
-    Lists fields for display in admin
-    """
-    list_display = ('user_name', 'first_name', 'last_name', 'email')
 
 
 # Register your models here.
