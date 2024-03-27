@@ -9,7 +9,7 @@ class BoardGameAdmin(admin.ModelAdmin):
     Lists fields for display in admin, fields for search,
     field filters.
     """
-    list_display = ('bg_name', 'user', 'created_on', 'bg_image')
+    list_display = ('bg_name', 'user', 'created_on') #, 'bg_image'
     list_filter = ('user', 'created_on', 'bg_name')
     search_fields = ['bg_name', 'user']
 
