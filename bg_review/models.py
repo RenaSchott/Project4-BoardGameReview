@@ -5,6 +5,9 @@ from django.utils.crypto import get_random_string
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
+RATE = ((0, "0"), (0.5, "0.5"), (1, "1"), (1.5, "1.5"), (2, "2"), (2.5, "2.5"), (3, "3"), (3.5, "3.5"), 
+(4, "4"), (4.5, "4.5"), (5, "5"), (5.5, "5.5"), (6, "6"), (6.5, "6.5"), (7, "7"), (7.5, "7.5"), (8, "8"), 
+(8.5, "8.5"), (9, "9"), (9.5, "9.5"), (10, "10"))
 
 # Model for board games 
 class BoardGame(models.Model):
@@ -47,13 +50,13 @@ class Rating(models.Model):
     Stores a single rating for a specific review entry
     """
     visitor = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="visitor", default=get_random_string(length=200))
-    rating = [("0", "0"), ("0.5", "0.5"), ("1", "1"), ("1.5", "1.5"), ("2", "2"), ("2.5", "2.5"), ("3", "3"), ("3.5", "3.5"), ("4", "4"), ("4.5", "4.5"), ("5", "5"), ("5.5", "5.5"), ("6", "6"), ("6.5", "6.5"), ("7", "7"), ("7.5", "7.5"), ("8", "8"), ("8.5", "8.5"), ("9", "9"), ("9.5", "9.5"), ("10", "10")]
+    rating = models.IntegerField(choices=RATE, default=0)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="review")
     help_text = "Please rate the board game from  0 = horrible board game to 10 = fantastic board game."
 
 
 def __str__(self):
-        return self.rating
+        return f"{self.rating} as rating for {self.review} by {self.visitor}"
 
 
 # Model for guest comments
@@ -68,11 +71,9 @@ class CommentGuest(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
 
-    objects = models.Manager()
-
 
 def __str__(self):
-    return f"Comment added to {self.review_id}"
+    return f"Comment added to {self.review_id} by {self.guest}"
 
 
 # Model for user comments
@@ -87,9 +88,7 @@ class CommentUser(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
 
-    objects = models.Manager()
-
 
 def __str__(self):
-    return f"Comment added to {self.review_id}"
+    return f"Comment added to {self.review_id} by {self.writer}"
 
