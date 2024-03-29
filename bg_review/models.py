@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils.crypto import get_random_string
 #from cloudinary.models import CloudinaryField
 
 
@@ -36,7 +35,7 @@ class Review(models.Model):
     Stores a single review for a specific board game entry
     """
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, default=get_random_string(length=200))
+    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="author")
     bg_name = models.ForeignKey(BoardGame, on_delete=models.CASCADE, related_name="bg")
     created_on = models.DateTimeField(auto_now_add=True)
@@ -50,8 +49,8 @@ class Review(models.Model):
         ordering = ["created_on", "approved"]
 
 
-def __str__(self):
-        return self.title
+    def __str__(self):
+            return self.title
 
 
 # Model for rating
@@ -59,14 +58,14 @@ class Rating(models.Model):
     """ 
     Stores a single rating for a specific review entry
     """
-    visitor = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="visitor", default=get_random_string(length=200))
+    visitor = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="visitor")
     rating = models.IntegerField(choices=RATE, default=0)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="review")
     help_text = "Please rate the board game from  0 = horrible board game to 10 = fantastic board game."
 
 
-def __str__(self):
-        return f"{self.rating} as rating for {self.review} by {self.visitor}"
+    def __str__(self):
+            return f"{self.rating} as rating for {self.review} by {self.visitor}"
 
 
 # Model for guest comments
@@ -86,8 +85,8 @@ class CommentGuest(models.Model):
         ordering = ["created_on", "approved"]
 
 
-def __str__(self):
-    return f"Comment added to {self.review_id} by {self.guest}"
+    def __str__(self):
+        return f"Comment added to {self.review_id} by {self.guest}"
 
 
 # Model for user comments
@@ -107,6 +106,6 @@ class CommentUser(models.Model):
         ordering = ["created_on", "approved"]
 
 
-def __str__(self):
-    return f"Comment added to {self.review_id} by {self.writer}"
+    def __str__(self):
+        return f"Comment added to {self.review_id} by {self.writer}"
 
