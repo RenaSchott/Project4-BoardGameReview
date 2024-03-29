@@ -1,6 +1,7 @@
 # Register your models here.
 from django.contrib import admin
 from .models import BoardGame, Review, Rating, CommentUser, CommentGuest
+from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(BoardGame)
@@ -15,16 +16,16 @@ class BoardGameAdmin(admin.ModelAdmin):
 
 
 @admin.register(Review)
-class ReviewAdmin(admin.ModelAdmin):
+class ReviewAdmin(SummernoteModelAdmin):
     """
-    Lists fields for display in admin, fields for search,
-    field filters.
+    Used summernote for the better text editor needed in this case.
     """
-    list_display = ('title', 'author', 'bg_name', 'created_on', 'content')
-    list_filter = ('author', 'created_on', 'approved')
-    search_fields = ['author', 'bg_name']
-    prepopulated_fields = {"slug": ("title", "bg_name")}
-
+    list_display = ('title', 'author', 'bg_name', 'created_on', 'content', 'slug', 'status', 'approved')
+    search_fields = ['title', 'author', 'bg_name']
+    list_filter = ('status', 'author', 'created_on', 'approved')
+    prepopulated_fields = {'slug': ('title',)}
+    summernote_fields = ('content',)
+    
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
@@ -58,10 +59,3 @@ class CommentGuestAdmin(admin.ModelAdmin):
     list_filter = ('blog', 'created_on', 'approved')
     search_fields = ['blog']
 
-
-# Register your models here.
-#admin.site.register(BoardGame, BoardGameAdmin)
-#admin.site.register(Review, ReviewAdmin)
-#admin.site.register(Rating, RatingAdmin)
-#admin.site.register(Comment, CommentAdmin)
-#admin.site.register(User, UserAdmin)
