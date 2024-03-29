@@ -18,6 +18,12 @@ class BoardGame(models.Model):
     user = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="user")
     created_on = models.DateTimeField(auto_now_add=True)
     #bg_image = CloudinaryField('image', default='placeholder')
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
+
+
+    class Meta:
+        ordering = ["created_on", "approved"]
 
 
 def __str__(self):
@@ -38,6 +44,10 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+
+
+    class Meta:
+        ordering = ["created_on", "approved"]
 
 
 def __str__(self):
@@ -72,6 +82,10 @@ class CommentGuest(models.Model):
     approved = models.BooleanField(default=False)
 
 
+    class Meta:
+        ordering = ["created_on", "approved"]
+
+
 def __str__(self):
     return f"Comment added to {self.review_id} by {self.guest}"
 
@@ -87,6 +101,10 @@ class CommentUser(models.Model):
     comment = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="comment")
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+
+
+    class Meta:
+        ordering = ["created_on", "approved"]
 
 
 def __str__(self):
