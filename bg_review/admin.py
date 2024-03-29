@@ -23,6 +23,7 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'bg_name', 'created_on', 'content')
     list_filter = ('author', 'created_on', 'approved')
     search_fields = ['author', 'bg_name']
+    prepopulated_fields = {"slug": ("title", "bg_name")}
 
 
 @admin.register(Rating)
