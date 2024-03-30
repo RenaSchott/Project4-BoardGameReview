@@ -22,7 +22,7 @@ View the live project here: <>
       - [Method](#method)
         - [POC (prove of concept)](#poc-(prove-of-concept))
         - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
-      - [Tasks] (#tasks)
+      - [Tasks](#tasks)
     - [Features](#features)
     - [Welcome screen](#welcome-screen)
     - [Username](#username)
