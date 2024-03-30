@@ -1,7 +1,8 @@
+{% url 'home' as home_url %}
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-100" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
     <!-- Header -->
     <header>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light nav-color">
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Reviews of Board Games</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -55,13 +56,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="navbar nav-color fixed-bottom">
+    <footer class="navbar bg-info fixed-bottom">
         <div class="container-fluid">
-            <h6>Come and join us here:</h6>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-square-x-twitter"></i>
-            <h6>BG Reviews</h6>
+            <h7>Made by R</h7>
+            <p>
+                <h6>Come and join us here:</h6>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+            </p>
+            <h7>BG Reviews</h7>
         </div>
     </footer>
 
