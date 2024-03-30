@@ -3,48 +3,63 @@
 {% load static %}
 
 {% block content %}
-<div class="main">
-    <div id="welcome">
+
+<!-- content start-->
+<div class="main mx-5 my-5">
+    <div id="welcome" class="text-center">
         <h1>Hello Board Gamers or those who still want to become one! Welcome to our review page!</h1>
         <p>Here everyone is welcomed to read or contribute according to our community standards of respect and a friendly with each other.</p>    
     </div>
     
     <div id="sep-line"></div>
-    
-     <!-- Blog Entries Column -->
-     <div class="col-12 mt-3 left">
-      <div class="row">
-          {% for review in review_list %}
-          <div class="col-md-4">
-              <div class="card mb-4">
-                  <div class="card-body">
-                      <div class="image-container">
-                          {% if "placeholder" in boardgame.bg_image.url %}
-                          <img class="card-img-top"
-                              src="{% static 'images/default.jpg' %}">
-                          {% else %}
-                          <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}">
-                          {% endif %}
-                          <div class="image-flash">
-                              <p class="author">Author: {{ preview.author }}</p>
-                          </div>
-                      </div>
-                      <a href="{% url 'review' %}" class="">
-                          <h2 class="card-title">{{ review.title }}</h2>
-                          <p class="card-text">{{ review.content }}</p>
-                      </a>
-                      <hr />
-                      <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>
-                          {{ post.number_of_likes }}</p>
-                  </div>
-              </div>
-          </div>
-          {% if forloop.counter|divisibleby:3 %}
-      </div>
-      <div class="row">
-          {% endif %}
-          {% endfor %}
 </div>
 
+<div class="container-fluid">
+    <div class="row">
+        <!-- Blog Entries Column -->
+     <div class="col-12 mt-3 left">
+        <div class="row">
+            {% for single_review in review_list %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in boardgame.bg_image.url %}
+                            <img class="card-img-top"
+                                src="{% static 'images/default.jpg' %}">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="author">Author: {{ preview.author }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'home' %}" class="">
+                            <h2 class="card-title">{{ review.title }}</h2>
+                            <p class="card-text">{{ review.content }}</p>
+                        </a>
+                        <hr />
+                        <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>
+                            {{ post.number_of_likes }}</p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
 
+<!-- content end -->
 {%endblock%}

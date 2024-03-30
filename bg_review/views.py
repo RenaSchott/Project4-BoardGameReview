@@ -1,13 +1,18 @@
 from django.shortcuts import render
+from django.views import generic
 from .models import BoardGame, Review, Rating, CommentUser, CommentGuest
 
 
 
 # Create your views here.
 #homepage
-def home(request):
-    reviews = Review.objects.filter(status=1)
-    return render(request, 'index.html', {'reviews':reviews})
+class ReviewList(generic.ListView):
+    """
+    All reviews displayed in a list
+    """
+    model = Review
+    queryset = Review.objects.order_by('-created_on')
+    template_name = 'index.html'
 
 
 #specific board game review
