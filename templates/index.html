@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-
 {% load static %}
-
 {% block content %}
 <!-- content start-->
+<div>
+    
+</div>
 <div class="main mx-5 my-5">
     <div id="welcome" class="text-center">
         <h1>Hello Board Gamers or those who still want to become one! Welcome to our review page!</h1>
@@ -24,18 +25,21 @@
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in boardgame.bg_image.url %}
-                            <img class="card-img-top"
-                                src="{% static 'images/default.jpg' %}">
+                                <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}">
                             {% else %}
-                            <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}">
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}">
                             {% endif %}
-                            <div class="image-flash">
+                            <div class="d-flex justify-content-between">
                                 <p class="author">Author: {{ single_review.author }}</p>
+                                <p class="createdon">Date: {{ single_review.created_on }}</p>
+                            </div>
+                            <div>
+                                <p class="boardgame">{{ single_review.bg_name }}</p>
                             </div>
                         </div>
                         <a href="{% url 'home' %}" class="">
                             <h2 class="card-title">{{ single_review.title }}</h2>
-                            <p class="card-text">{{ single_review.content }}</p>
+                            <p class="card-text">{{ single_review.short }}</p>
                         </a>
                         <hr />
                         <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>

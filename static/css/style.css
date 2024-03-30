@@ -1,9 +1,12 @@
-body {
-    background-color: blue;
+.nav-color {
+    background-color: rgb(247, 118, 58);
 }
 
-.navbar {
-    background-color: black;
+body {
+    background-color: rgb(214, 214, 156);
+    width: 100%;
+    height: 100vh;
+    
 }
 
 #welcome {
@@ -22,6 +25,19 @@ body {
 h1 {
     text-align: center;
     margin: 15px 0;
+}
+
+.author {
+    font-size: smaller;
+}
+
+.createdon {
+    font-size: x-small;
+    color: rgb(168, 50, 50);
+}
+
+.boardgame {
+    font-weight: bold;
 }
 
 

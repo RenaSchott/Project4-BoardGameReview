@@ -20,7 +20,7 @@ class ReviewAdmin(SummernoteModelAdmin):
     """
     Used summernote for the better text editor needed in this case.
     """
-    list_display = ('title', 'author', 'bg_name', 'created_on', 'content', 'slug', 'status', 'approved')
+    list_display = ('title', 'author', 'bg_name', 'created_on', 'content', 'slug', 'status', 'approved', 'short')
     search_fields = ['title', 'author', 'bg_name']
     list_filter = ('status', 'author', 'created_on', 'approved')
     prepopulated_fields = {'slug': ('title',)}

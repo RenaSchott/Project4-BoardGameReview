@@ -43,6 +43,7 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+    short = models.TextField(default="an_excerpt")
 
 
     class Meta:
@@ -50,7 +51,7 @@ class Review(models.Model):
 
 
     def __str__(self):
-            return self.title
+            return f"self.title, self.bg_name"
 
 
 # Model for rating
