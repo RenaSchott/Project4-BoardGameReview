@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-
 <!-- content start-->
 <div class="main mx-5 my-5">
     <div id="welcome" class="text-center">
@@ -31,12 +30,12 @@
                             <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}">
                             {% endif %}
                             <div class="image-flash">
-                                <p class="author">Author: {{ preview.author }}</p>
+                                <p class="author">Author: {{ single_review.author }}</p>
                             </div>
                         </div>
                         <a href="{% url 'home' %}" class="">
-                            <h2 class="card-title">{{ review.title }}</h2>
-                            <p class="card-text">{{ review.content }}</p>
+                            <h2 class="card-title">{{ single_review.title }}</h2>
+                            <p class="card-text">{{ single_review.content }}</p>
                         </a>
                         <hr />
                         <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>
@@ -60,6 +59,5 @@
     </nav>
     {% endif %}
 </div>
-
 <!-- content end -->
 {%endblock%}

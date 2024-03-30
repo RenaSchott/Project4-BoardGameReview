@@ -12,7 +12,9 @@ class ReviewList(generic.ListView):
     """
     model = Review
     queryset = Review.objects.order_by('-created_on')
-    template_name = 'index.html'
+    print(queryset)
+    template_name = "index.html"
+    paginate_by = 6
 
 
 #specific board game review

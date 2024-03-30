@@ -1,12 +1,9 @@
-.nav-color {
-    background-color: rgb(226, 107, 51);
+body {
+    background-color: blue;
 }
 
-.main {
-    background-color: beige;
-    width: 100%;
-    height: 100vh;
-    
+.navbar {
+    background-color: black;
 }
 
 #welcome {
@@ -26,3 +23,5 @@ h1 {
     text-align: center;
     margin: 15px 0;
 }
+
+
