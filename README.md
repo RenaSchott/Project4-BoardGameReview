@@ -327,11 +327,22 @@ There is the possibility to integrate:
 
 ### Framework, Libraries and Programs
 
-- Frameworks 
+- Frameworks were used to speed up 
     - Django
     - Bootstrap
 - Libraries 
-    - 
+    - Gunicorn
+      - was used as python http server for WSGI applications
+    - Pyscopg2
+      - was used as PostgresSQL Database adapter
+    - Django-allauth
+      - was used to create user authentication
+    - Django-crispy-forms
+      - was used to control rendering behavior of Django forms
+    - Whitenoise
+      - was used to serve static non-media files
+    - Summernote
+      - was used as WYSIWYG editor
 - Moduls
     - 
 - Programs
@@ -348,11 +359,13 @@ There is the possibility to integrate:
     - Heroku 
         - was used to deploy the project 
     - ElephantSQL
-        - was used for storing the database    
+        - was used for storing the database
+    - Cloudinary
+        - was used to serve static media files  
     - CI Python Linter
         - was used for finding errors
     - Languagetool
-        - was used to check the spelling and grammar in the README file.
+        - was used to check the spelling and grammar in the README file
 
 
 ## Testing
