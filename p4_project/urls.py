@@ -19,6 +19,7 @@ from django.urls import path, include
 # from bg_review import views
 
 urlpatterns = [
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('bg_review.urls'), name='bg-review-urls'),
