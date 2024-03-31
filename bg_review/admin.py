@@ -1,6 +1,6 @@
 # Register your models here.
 from django.contrib import admin
-from .models import BoardGame, Review, Rating, CommentUser, CommentGuest
+from .models import BoardGame, Review, Rating, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -38,8 +38,8 @@ class RatingAdmin(admin.ModelAdmin):
     search_fields = ['visitor', 'rating']
 
 
-@admin.register(CommentUser)
-class CommentUserAdmin(admin.ModelAdmin):
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
     """
     Lists fields for display in admin, fields for search,
     field filters.
@@ -47,15 +47,4 @@ class CommentUserAdmin(admin.ModelAdmin):
     list_display = ('content', 'created_on', 'writer', 'comment', 'updated_on', 'approved')
     list_filter = ('comment', 'created_on', 'approved')
     search_fields = ['comment']
-
-
-@admin.register(CommentGuest)
-class CommentGuestAdmin(admin.ModelAdmin):
-    """
-    Lists fields for display in admin, fields for search,
-    field filters.
-    """
-    list_display = ('content', 'created_on', 'guest', 'blog', 'updated_on', 'approved')
-    list_filter = ('blog', 'created_on', 'approved')
-    search_fields = ['blog']
 

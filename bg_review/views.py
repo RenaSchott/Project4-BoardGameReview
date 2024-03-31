@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import BoardGame, Review, Rating, CommentUser, CommentGuest
+from .models import BoardGame, Review, Rating, Comment
 
 
 
@@ -18,12 +18,14 @@ class ReviewList(generic.ListView):
 
 
 #specific board game review
-def single_review(request, id):
-    review = Review.objects.get(id=id)
+def single_review(request, slug):
+    """
+    All details for one review are displayed
+    """
+    queryset = Review.objects.filter(status=1)
+    review = get_object_or_404(queryset, slug=slug)
     rated = Rating.objects.filter(status=1)
-    comments = Comment.object.filter(status=1)
-    return render(request, 'review.html',   {
-                "review": review,
-                "comments": comments,
-                "rated": rating,
-            },)
+    #comment = Comment.object.filter(status=1)
+    return render(request, 'single_review.html',
+                {"review": review},
+            )

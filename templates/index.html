@@ -7,7 +7,7 @@
 </div>
 <div class="main mx-5 my-5">
     <div id="welcome" class="text-center">
-        <h1>Hello Board Gamers or those who still want to become one! Welcome to our review page!</h1>
+        <h1>Hello Board Gamers or those who want to become one!<br>Welcome to our review page!</h1>
         <p>Here everyone is welcomed to read or contribute according to our community standards of respect and a friendly with each other.</p>    
     </div>
     
@@ -17,7 +17,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Blog Entries Column -->
-     <div class="col-12 mt-3 left">
+     <div class="col-12 mt-3 left whole-card">
         <div class="row">
             {% for single_review in review_list %}
             <div class="col-md-4">
@@ -37,7 +37,7 @@
                                 <p class="boardgame">{{ single_review.bg_name }}</p>
                             </div>
                         </div>
-                        <a href="{% url 'home' %}" class="">
+                        <a href="{% url 'single_review' single_review.slug %}" class="review-link">
                             <h2 class="card-title">{{ single_review.title }}</h2>
                             <p class="card-text">{{ single_review.short }}</p>
                         </a>

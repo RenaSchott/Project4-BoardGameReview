@@ -51,7 +51,7 @@ class Review(models.Model):
 
 
     def __str__(self):
-            return f"self.title, self.bg_name"
+            return self.title
 
 
 # Model for rating
@@ -63,35 +63,15 @@ class Rating(models.Model):
     rating = models.IntegerField(choices=RATE, default=0)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="review")
     help_text = "Please rate the board game from  0 = horrible board game to 10 = fantastic board game."
+    status = models.IntegerField(choices=STATUS, default=0)
 
 
     def __str__(self):
             return f"{self.rating} as rating for {self.review} by {self.visitor}"
 
 
-# Model for guest comments
-class CommentGuest(models.Model):
-    """ 
-    Stores a single comment for a specific review entry
-    """
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    guest = models.CharField(max_length=200, unique=True) 
-    blog = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="blog")
-    updated_on = models.DateTimeField(auto_now=True)
-    approved = models.BooleanField(default=False)
-
-
-    class Meta:
-        ordering = ["created_on", "approved"]
-
-
-    def __str__(self):
-        return f"Comment added to {self.review_id} by {self.guest}"
-
-
 # Model for user comments
-class CommentUser(models.Model):
+class Comment(models.Model):
     """ 
     Stores a single comment for a specific review entry
     """
@@ -101,6 +81,7 @@ class CommentUser(models.Model):
     comment = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="comment")
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+    status = models.IntegerField(choices=STATUS, default=0)
 
 
     class Meta:

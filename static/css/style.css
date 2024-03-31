@@ -9,16 +9,20 @@ body {
     
 }
 
+main {
+    padding-bottom: 25px;
+}
+
 #welcome {
     text-align: center;
-    padding: 40px 0;
+    padding: 10px 0;
 }
 
 #sep-line {
     background-color: rgba(71, 17, 17, 0.5);
     width: 80%;
     height: 10px;
-    margin: 10px auto;
+    margin: 5px auto;
     text-align: center;
 }
 
@@ -40,4 +44,12 @@ h1 {
     font-weight: bold;
 }
 
+.review-link {
+    font-weight: 500;
+}
 
+.image-rev {
+    max-width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
