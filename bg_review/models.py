@@ -25,7 +25,7 @@ class BoardGame(models.Model):
         ordering = ["created_on", "approved"]
 
 
-def __str__(self):
+    def __str__(self):
         return self.bg_name
 
 
