@@ -53,3 +53,15 @@ h1 {
     height: auto;
     padding-top: 20px;
 }
+
+.link {
+    background-color: rgb(195, 245, 228);
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: rgb(179, 47, 47);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
