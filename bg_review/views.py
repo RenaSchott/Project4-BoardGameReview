@@ -76,7 +76,7 @@ def comment_delete(request, slug, comment_id):
     """
     Delete comments
     """
-    queryset = Post.objects.filter(status=1)
+    queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
