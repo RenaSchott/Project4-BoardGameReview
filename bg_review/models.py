@@ -78,7 +78,7 @@ class Comment(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     writer = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="writer")
-    comment = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="comment")
+    comment = models.ForeignKey(Review, on_delete=models.CASCADE, related_name = "comments")
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
