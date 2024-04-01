@@ -89,5 +89,5 @@ class Comment(models.Model):
 
 
     def __str__(self):
-        return f"Comment added to {self.review_id} by {self.writer}"
+        return f"Comment added by {self.writer}"
 
