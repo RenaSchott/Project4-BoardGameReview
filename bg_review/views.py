@@ -22,8 +22,13 @@ def single_review(request, slug):
     """
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
-    #rated = Rating.objects.filter(status=1)
-    #rated_count = review.rated.filter(status=1).count
+    ratings = Rating.objects.filter(review=review)
+    ratings_count = 0
+    ratings_sum = 0
+    for rating in ratings:
+        ratings_count += 1
+        ratings_sum += rating.rating
+    ratings_average = ratings_sum / ratings_count
     comments = review.comments.all().order_by("-created_on")
     comment_count = review.comments.filter(approved=True).count
     if request.method == "POST":
@@ -45,7 +50,9 @@ def single_review(request, slug):
                     "review": review,
                     "comments": comments,
                     "comment_count": comment_count,
-                    "comment_form": comment_form,            
+                    "comment_form": comment_form,
+                    "ratings_count": ratings_count,
+                    "ratings_average": ratings_average,            
             },)
 
 

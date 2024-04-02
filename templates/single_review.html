@@ -52,10 +52,14 @@
       <div class="col-12">
         <strong class="text-secondary">
           <i class="fa-solid fa-star-half-stroke"></i>
-          {% for review in reviews %}
-            {{ review.title }} {{ review.avg_rating }} 
-            Rating count: {{ review.rating.all.count }}
-          {% endfor %}
+          {% if ratings_average == 1 %}
+            <h1>Hello!</h1>
+          {% elif myvar == 2 %}
+            <h1>Welcome!</h1>
+          {% else %}
+            <h1>Greetings!</h1>
+          {% endif %}
+          {{ ratings_average }} Total number: {{ ratings_count }}
         </strong>
       </div>
     </div>

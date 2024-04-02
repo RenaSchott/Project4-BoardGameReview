@@ -1,4 +1,4 @@
-# Battleship
+# Boardgame review 
 
 Being interested in different board games, this Django challenge was an interesting experience. The site should attract all user liking board games and contributing to an open-minded exchange on them.
 
@@ -7,7 +7,7 @@ View the live project here: <>
 
 ## Table of content
 
-- [Battleship](#battleship)
+- [Boardgame review ](#boardgame-review )
   - [Table of content](#table-of-content)
   - [UX](#ux)
     - [Site owner goals](#site-owner-goals)
