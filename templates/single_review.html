@@ -37,16 +37,30 @@
         </div>
     </div>
     <!-- Display count of comments -->
-  <div class="row">
-    <div class="col-12">
-      <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
-      </strong>
+    <div class="row">
+      <div class="col-12">
+        <strong class="text-secondary">
+          <i class="far fa-comments"></i> {{ comment_count }}
+        </strong>
+      </div>
+      <div class="col-12">
+        <hr>
+      </div>
     </div>
-    <div class="col-12">
-      <hr>
+    <!-- Display rating -->
+    <div class="row">
+      <div class="col-12">
+        <strong class="text-secondary">
+          <i class="fa-solid fa-star-half-stroke"></i>
+          {% for review in reviews %}
+            {{ review.title }} {{ review.avg_rating }} 
+            Rating count: {{ review.rating.all.count }}
+          {% endfor %}
+        </strong>
+      </div>
     </div>
-  </div>
+    
+
   <!-- Display Comments -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3">
@@ -54,12 +68,12 @@
       <div class="card-body">
         {% for comment in comments %}
         <div class="p-2 comments {% if not comment.approved and comment.writer == user %}faded{% elif not comment.approved %}d-none{% endif %}">
-          <p class="font-weight-bold id_body">
+          <article class="font-weight-bold">
             {{ comment.writer }}
             <span class="font-weight-normal">
               {{ comment.created_on }}
             </span> wrote:
-          </p>
+          </article>
           <div id="comment{{ comment.id }}">
             {{ comment.content | linebreaks }}
           </div>

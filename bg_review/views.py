@@ -22,7 +22,8 @@ def single_review(request, slug):
     """
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
-    rated = Rating.objects.filter(status=1)
+    #rated = Rating.objects.filter(status=1)
+    #rated_count = review.rated.filter(status=1).count
     comments = review.comments.all().order_by("-created_on")
     comment_count = review.comments.filter(approved=True).count
     if request.method == "POST":
@@ -30,7 +31,6 @@ def single_review(request, slug):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.writer = request.user
-            # comment.content = review
             comment.comment = review
             comment.save()
             messages.add_message(
