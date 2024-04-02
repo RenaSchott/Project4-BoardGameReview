@@ -358,7 +358,7 @@ There is the possibility to integrate:
         - was used to write the code and commit it to GitHub
     - Heroku 
         - was used to deploy the project 
-    - ElephantSQL
+    - CI Database Maker
         - was used for storing the database
     - Cloudinary
         - was used to serve static media files  

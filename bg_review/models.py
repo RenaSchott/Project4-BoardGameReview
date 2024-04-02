@@ -38,6 +38,7 @@ class Review(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.RESTRICT, related_name="author")
     bg_name = models.ForeignKey(BoardGame, on_delete=models.CASCADE, related_name="bg")
+    review_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)

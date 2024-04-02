@@ -12,7 +12,6 @@ class ReviewList(generic.ListView):
     """
     model = Review
     queryset = Review.objects.order_by('-created_on')
-    print(queryset)
     template_name = "index.html"
     paginate_by = 6
 
@@ -31,7 +30,8 @@ def single_review(request, slug):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.writer = request.user
-            comment.content = review
+            # comment.content = review
+            comment.comment = review
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
@@ -62,7 +62,7 @@ def comment_edit(request, slug, comment_id):
 
         if comment_form.is_valid() and comment.writer == request.user:
             comment = comment_form.save(commit=False)
-            comment.content = content
+            comment.comment = review
             comment.approved = False
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')

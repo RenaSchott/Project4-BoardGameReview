@@ -5,20 +5,24 @@
 
 {% block content %}
 
-<div class="">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <!-- Review title -->
-                <h1 class="review-title">{{ review.title }}</h1>
-                <!-- Review author | created date -->
-                <p class="review-subtitle">{{ review.author }} | {{ review.created_on }}</p>
-            </div>
-            <div class="d-md-block col-md-6">
-                <img src="{% static 'images/default.jpg' %}" class="scale image-rev" alt="placeholder">
-            </div>
-        </div>
-    </div>
+
+
+<div class="container">
+  <div class="row g-0">
+      <div class="col-md-6">
+          <!-- Review title -->
+          <h1 class="review-title">{{ review.title }}</h1>
+          <!-- Review author | created date -->
+          <p class="review-subtitle">{{ review.author }} | {{ review.created_on }}</p>
+      </div>
+      <div class="d-md-block col-md-6">
+        {% if "placeholder" in review.review_image.url %}
+          <img src="{% static 'images/default.jpg' %}" width="75%" alt="placeholder image" >
+        {% else %}
+          <img src="{{ review.review_image.url }}" width="75%" alt="{{ review.title }}">
+        {% endif %}
+      </div>
+  </div>
 </div>
 
 <div class="container">
@@ -50,7 +54,7 @@
       <div class="card-body">
         {% for comment in comments %}
         <div class="p-2 comments {% if not comment.approved and comment.writer == user %}faded{% elif not comment.approved %}d-none{% endif %}">
-          <p class="font-weight-bold">
+          <p class="font-weight-bold id_body">
             {{ comment.writer }}
             <span class="font-weight-normal">
               {{ comment.created_on }}
