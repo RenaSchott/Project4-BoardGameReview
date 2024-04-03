@@ -15,6 +15,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,6 +140,13 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'msg-success',
+    messages.ERROR: 'msg-error',
+}
+
 
 
 # Static files (CSS, JavaScript, Images)

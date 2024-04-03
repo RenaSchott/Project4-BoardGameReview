@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="row g-0">
-      <div class="col-md-6">
+      <div class="col-md-6 review_titles">
           <!-- Review title -->
           <h1 class="review-title">{{ review.title }}</h1>
           <!-- Review author | created date -->
@@ -36,34 +36,21 @@
             </div>
         </div>
     </div>
-    <!-- Display count of comments -->
     <div class="row">
-      <div class="col-12">
+      <!-- Display count of comments -->
+      <div class="col-6 text-start">
         <strong class="text-secondary">
           <i class="far fa-comments"></i> {{ comment_count }}
         </strong>
       </div>
-      <div class="col-12">
-        <hr>
-      </div>
-    </div>
-    <!-- Display rating -->
-    <div class="row">
-      <div class="col-12">
+      <!-- Display rating -->
+      <div class="col-6 text-end">
         <strong class="text-secondary">
           <i class="fa-solid fa-star-half-stroke"></i>
-          {% if ratings_average == 1 %}
-            <h1>Hello!</h1>
-          {% elif myvar == 2 %}
-            <h1>Welcome!</h1>
-          {% else %}
-            <h1>Greetings!</h1>
-          {% endif %}
-          {{ ratings_average }} Total number: {{ ratings_count }}
+          {{ ratings_average }} || Total number of ratings: {{ ratings_count }}
         </strong>
       </div>
-    </div>
-    
+    </div>    
 
   <!-- Display Comments -->
   <div class="row">
@@ -103,7 +90,7 @@
         <form id="commentForm" method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
-          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+          <button id="submitButton" type="submit" class="btn btn-lg">Submit</button>
         </form>
         {% else %}
         <p>Log in to leave a comment</p>

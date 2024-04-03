@@ -48,6 +48,21 @@ h1 {
     font-weight: 500;
 }
 
+.review_titles {
+    margin: auto;
+}
+
+.review-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.review-subtitle {
+    text-align: center;
+    font-size: small;
+    color: rgb(240, 94, 94);
+}
+
 .image-rev {
     max-width: 100%;
     height: auto;
@@ -55,13 +70,36 @@ h1 {
 }
 
 .link {
-    background-color: rgb(195, 245, 228);
+    background-color: rgb(157, 241, 213);
     border-radius: 5px;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
 }
 
 .btn {
     background-color: rgb(179, 47, 47);
     border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.approval {
+    color: rgb(202, 31, 218)
+}
+
+.msg-success {
+    background-color: rgb(76, 138, 79, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.msg-error {
+    background-color: rgb(138, 84, 84, 0.5);
     text-transform: uppercase;
     font-weight: bold;
 }

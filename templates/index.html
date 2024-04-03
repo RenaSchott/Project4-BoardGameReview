@@ -21,13 +21,13 @@
         <div class="row">
             {% for single_review in review_list %}
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="mb-4">
                     <div class="card-body">
-                        <div class="image-container">
+                        <div>
                             {% if "placeholder" in boardgame.bg_image.url %}
-                                <img class="card-img-top scale" src=" {{ boardgame.bg_image.url  }}" alt="{{ boardgame.bg_name }}">
+                                <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}" alt="{{ boardgame.bg_name }}">
                             {% else %}
-                                <img class="card-img-top scale" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                             {% endif %}
                             <div class="d-flex justify-content-between">
                                 <p class="author">Author: {{ single_review.author }}</p>
@@ -37,7 +37,7 @@
                                 <p class="boardgame">{{ single_review.bg_name }}</p>
                             </div>
                         </div>
-                        <a href="{% url 'single_review' single_review.slug %}" class="review-link">
+                        <a href="{% url 'single_review' single_review.slug %}" class="review-link link">
                             <h2 class="card-title">{{ single_review.title }}</h2>
                             <p class="card-text">{{ single_review.short }}</p>
                         </a>
@@ -58,12 +58,12 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}"
+                <a class="link" href="?page={{ page_obj.previous_page_number }}"
                   class="page-link">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a class="link" href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
