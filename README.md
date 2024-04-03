@@ -2,6 +2,8 @@
 
 Being interested in different board games, this Django challenge was an interesting experience. The site should attract all user liking board games and contributing to an open-minded exchange on them.
 
+![Displaying responsiveness of the homepage](read-me-images/responsive.png)
+
 View the live project here: <https://bg-review-p4-acb57fa06b77.herokuapp.com/>
 
 
@@ -288,18 +290,53 @@ The tasks can be found within the user stories here: <https://github.com/RenaSch
 
 ## Features
 
-### Welcome screen
+### Homepage
 
-- The welcome screen is the first thing the user sees from the battleship app. Here the large letters "Welcome to Battleship!" can be seen, as well as the question "Do you want to start the game (y/n)?. The (y/n) indicates the possible input. By typing in y the user can progress with the game. While n will stop the game from running. If the user gives any other input, the user will be asked again to answer the question correct. The y and n answer will be automatically commented.
+- The homepage welcomes the user and reminds the user of a friendly with each other. 
+Then all the reviews are displayed with an image, the author, the creation date and an excerpt. 
+At the bottom the user can go to the next page or later on to the previous one.
 
-![Screen shot of the welcome screen of the project](assets/readmeimages/welcome-screen.png)
+![Screen shot of the homepage](read-me-images/homepage.png)
+![Screen shot of the homepage](read-me-images/next.png)
+![Screen shot of the homepage](read-me-images/prev.png)
 
+### Details review page
 
-### User moves
+- By clicking on the text of one specific review on the main homepage the user will be forwarded to the detailed page. 
+There next to an image, the title, the author, the creation date and the content and count of comments as well as the average rating
+together with the number of ratings is displayed. The lower half of the page is filled with the comment section.
 
-- 
+![Screen shot of the detailed page](read-me-images/rev-details.png)
 
-![]()
+### Comment section
+
+- The comment section displays approved comments on the left and an explanation of how to make a comment on the right. Logged in users can see there submitted and not yet approved comments on the left where there are also the buttons for editing and deletion. On the right they can submit another comment. After approval the comment is displayed for everyone on the homepage of the review details.
+
+![Screen shot of the comment section](read-me-images/comment.png)
+![Screen shot of the question for deletion](read-me-images/del-com.png)
+
+### Login
+
+- In the menu bar in the header the user can choose to login. After clikcing the button the login forms opens and the user can sign in.
+
+![Screen shot of the login button](read-me-images/reg-login.png)
+![Screen shot of the login form](read-me-images/signin.png)
+
+### Register
+
+- In the menu bar in the header the user can choose to register. After clikcing the button the signup forms opens and the user can register.
+
+![Screen shot of the register button](read-me-images/reg-login.png)
+![Screen shot of the login form](read-me-images/signup.png)
+
+### Logout
+
+- The user can find the logout button in the menu in the header. After clicking the button the user is asked again whether the user wants to sign out. After the confirmation click an written confirmation is displayed.
+
+![Screen shot of the logout button](read-me-images/logou-btn.png)
+![Screen shot of the signout](read-me-images/signout.png)
+![Screen shot of the signout confirmation](read-me-images/signout-confirmation.png)
+
 
 ### Features left to implement
 
