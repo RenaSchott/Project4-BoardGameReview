@@ -361,7 +361,11 @@ There is the possibility to integrate:
     - Cloudinary
         - was used to serve static media files  
     - Validator W3
-        - was used to validate the html
+        - was used to validate the HTML
+    - Validator W3C
+        - was used to validate the CSS
+    - JSHint
+        - was used to validate the JavaScript
     - CI Python Linter
         - was used for finding errors
     - Languagetool
@@ -399,8 +403,21 @@ There is the possibility to integrate:
 
 - **Validator W3**
 
-all sites tested - each result:
+All sites tested - each result:
 ![Screen shot one result of the testings](read-me-images/html-validation.png)
+
+- **Validator W3C**
+
+Test results:
+![Screen shot of the errors]()
+![Screen shot of the warnings]()
+
+- **JSHint**
+
+Test result:
+![Screen shot of the warnings](read-me-images/js-val2.png)
+![Screen shot of one undefined variable](read-me-images/js-val1.png)
+
 
 - **CI Python Linter**
 
@@ -413,8 +430,8 @@ all sites tested - each result:
 
 ### Unfixed bugs
 
-- The comments are acceptable.
-
+- The CSS validation results showed a problem with Bootstrap5. Errors and warnings were acceptable since Bootstrap is needed for the project.
+- The results of the JS validation are also acceptable. The variable did not need to be defined at this point.
 
 ## Deployment
 
