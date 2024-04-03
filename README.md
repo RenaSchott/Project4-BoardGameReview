@@ -415,7 +415,6 @@ Test results:
 - **JSHint**
 
 Test result:
-![Screen shot of the warnings](read-me-images/js-val2.png)
 ![Screen shot of one undefined variable](read-me-images/js-val1.png)
 
 
