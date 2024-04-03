@@ -475,8 +475,8 @@ All sites tested - each result:
 - **Validator W3C**
 
 Test results:
-![Screenshot of the errors]()
-![Screenshot of the warnings]()
+![Screenshot of the errors](read-me-images/css-validation1.png)
+![Screenshot of the warnings](read-me-images/css-validation2.png)
 
 - **JSHint**
 
