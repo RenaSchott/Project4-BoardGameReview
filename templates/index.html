@@ -61,8 +61,7 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a class="link" href="?page={{ page_obj.previous_page_number }}"
-                  class="page-link">&laquo; PREV</a>
+                <a class="link" href="?page={{ page_obj.previous_page_number }}">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}

@@ -343,8 +343,6 @@ There is the possibility to integrate:
       - was used to serve static non-media files
     - Summernote
       - was used as WYSIWYG editor
-- Moduls
-    - 
 - Programs
     - Balsamiq
         - was used to create the wireframes
@@ -362,6 +360,8 @@ There is the possibility to integrate:
         - was used for storing the database
     - Cloudinary
         - was used to serve static media files  
+    - Validator W3
+        - was used to validate the html
     - CI Python Linter
         - was used for finding errors
     - Languagetool
@@ -396,6 +396,11 @@ There is the possibility to integrate:
 
 
 ### Validator testing
+
+- **Validator W3**
+
+all sites tested - each result:
+![Screen shot one result of the testings](read-me-images/html-validation.png)
 
 - **CI Python Linter**
 
