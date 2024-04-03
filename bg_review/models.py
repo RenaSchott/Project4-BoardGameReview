@@ -11,6 +11,7 @@ RATE = ((0, "0"), (1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, "5"))
 class BoardGame(models.Model):
     """
     Stores a single board game entry
+    (related to :model:`auth.User`)
     """
     bg_name = models.CharField(max_length=200, unique=True)
     user = models.ForeignKey(
@@ -31,6 +32,7 @@ class BoardGame(models.Model):
 class Review(models.Model):
     """
     Stores a single review for a specific board game entry
+    (related to :model:`auth.User`, :model: `bg_review.BoardGame`)
     """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -57,6 +59,7 @@ class Review(models.Model):
 class Rating(models.Model):
     """
     Stores a single rating for a specific review entry
+    (related to :model:`auth.User`, :model: `bg_review.Review`)
     """
     visitor = models.ForeignKey(
         User, on_delete=models.RESTRICT, related_name="visitor")
@@ -74,7 +77,8 @@ class Rating(models.Model):
 # Model for user comments
 class Comment(models.Model):
     """
-    Stores a single comment for a specific review entry
+    Stores a single comment for a specific review entry 
+    (related to :model:`auth.User`, :model: `bg_review.Review`)
     """
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

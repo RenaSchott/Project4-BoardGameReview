@@ -9,6 +9,14 @@ from .forms import CommentForm
 class ReviewList(generic.ListView):
     """
     All reviews displayed in a list
+    (Displays: :model:`bg_review.Review`)
+    **Context**
+    ``queryset``
+        All published instances of :model:`bg_review.Review`
+    ``paginate_by``
+        Number of posts per page.
+    **Template:**
+    :template:`index.html`
     """
     model = Review
     queryset = Review.objects.order_by('-created_on')
@@ -19,6 +27,17 @@ class ReviewList(generic.ListView):
 def single_review(request, slug):
     """
     All details for one review are displayed
+    (Displays: :model:`bg_review.Review`, 
+    :model:`bg_review.Rating` and :model:`bg_review.Comment`)
+    **Context**
+     ``review``
+        An instance of :model:`bg_review.Review`.
+    ``comments``
+        All approved comments related to the review.
+    ``ratings``
+        All ratings related to the review.
+    **Template:**
+    :template:`single_review.html`
     """
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
@@ -28,7 +47,10 @@ def single_review(request, slug):
     for rating in ratings:
         ratings_count += 1
         ratings_sum += rating.rating
-    ratings_average = ratings_sum / ratings_count
+    if ratings_count > 0:
+        ratings_average = ratings_sum / ratings_count
+    else:
+        ratings_average = "Not rated yet."
     comments = review.comments.all().order_by("-created_on")
     comment_count = review.comments.filter(approved=True).count
     if request.method == "POST":
@@ -58,6 +80,14 @@ def single_review(request, slug):
 def comment_edit(request, slug, comment_id):
     """
     Edit comments
+    (Displays: :model:`bg_review.Review`, :model:`bg_review.Comment`)
+    **Context**
+    ``review``
+        An instance of :model:`bg_review.Review`.
+    ``comment``
+        A single comment related to the review.
+    ``comment_form``
+        An instance of :form:`bg_review.CommentForm`
     """
     if request.method == "POST":
 
@@ -82,6 +112,12 @@ def comment_edit(request, slug, comment_id):
 def comment_delete(request, slug, comment_id):
     """
     Delete comments
+    (Displays: :model:`bg_review.Review`, :model:`bg_review.Comment`)
+    **Context**
+    ``review``
+        An instance of :model:`bg_review.Review`.
+    ``comment``
+        A single comment related to the review.
     """
     queryset = Review.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)

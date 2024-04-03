@@ -435,7 +435,7 @@ Test results of files with custom written code:
 
 ## Deployment
 
-The deployment was done after the tutorial in the course content using <https://www.heroku.com/>.
+The deployment was done after the tutorial in the course content using <https://www.heroku.com/>, <https://cloudinary.com/>, <https://dbs.ci-dbs.net/> and <https://whitenoise.readthedocs.io/en/latest/>.
 
 For deployment:
 - A Heroku account must be created.
@@ -469,10 +469,19 @@ Inspirations for specific problems were taken from the following websites:
 ### Media
 
 Images were downloaded from <https://pixabay.com/de/>
-- Login image <https://pixabay.com/de/illustrations/schach-hunde-haustier-schach-spiel-7802136/>
-- Carcassonne: <https://pixabay.com/de/illustrations/brettspiel-brett-spiel-spiele-2237460/>
-- Ludo: <https://pixabay.com/de/vectors/brett-spiel-ludo-freizeit-gl%C3%BCck-48117/>
-- Chess: <https://pixabay.com/de/illustrations/schach-strategie-spiel-k%C3%B6nig-brett-1709603/>
+- Placeholder image: <https://pixabay.com/de/illustrations/schach-hunde-haustier-schach-spiel-7802136/>
+- Carcassonne: 
+  - <https://pixabay.com/de/illustrations/brettspiel-brett-spiel-spiele-2237460/>
+- Ludo: 
+  - <https://pixabay.com/de/vectors/brett-spiel-ludo-freizeit-gl%C3%BCck-48117/>
+  - <https://pixabay.com/de/vectors/ludo-spiel-spielbrett-148865/>
+- Chess: 
+  - <https://pixabay.com/de/illustrations/schach-strategie-spiel-k%C3%B6nig-brett-1709603/>
+  - <https://pixabay.com/photos/checkmate-chess-board-chess-board-1511866/>
+  - <https://pixabay.com/de/vectors/schach-planke-brettspiel-4538802/>
+- Monopoly:
+  - <https://pixabay.com/de/illustrations/hintergrund-spiel-brett-monopol-8383489/>
+  - <https://pixabay.com/de/illustrations/monopol-spielbrett-spiel-spa%C3%9F-1984400/>
 
 ## Acknowledgements
 

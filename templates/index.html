@@ -24,10 +24,10 @@
                     <div class="mb-4">
                         <div class="card-body">
                             <div>
-                                {% if "placeholder" in boardgame.bg_image.url %}
-                                    <img class="card-img-top" src=" {{ boardgame.bg_image.url  }}" alt="{{ boardgame.bg_name }}">
-                                {% else %}
+                                {% if "placeholder" in single_review.bg_name.bg_image.url %}
                                     <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                                {% else %}
+                                    <img class="card-img-top" src=" {{ single_review.bg_name.bg_image.url  }}" alt="{{ single_review.bg_name }}">
                                 {% endif %}
                                 <div class="d-flex justify-content-between">
                                     <p class="author">Author: {{ single_review.author }}</p>
