@@ -26,12 +26,13 @@ View the live project here: <https://bg-review-p4-acb57fa06b77.herokuapp.com/>
         - [MVP (minimum viable product)](#mvp-(minimum-viable-product))
       - [Tasks](#tasks)
     - [Features](#features)
-    - [Welcome screen](#welcome-screen)
-    - [Username](#username)
-    - [Game rules](#game-rules)
-    - [Game board](#game-board)
-    - [User moves](#user-moves)
-    - [Features left to implement](#features-left-to-implement)
+      - [Homepage](#homepage)
+      - [Detailed review page](#detailed-review-page)
+      - [Comment section](#comment-section)
+      - [Login](#login)
+      - [Register](#register)
+      - [Logout](#logout)
+      - [Features left to implement](#features-left-to-implement)
   - [Used Technologies](#used-technologies)
     - [Languages Used](#languages-used)
     - [Framework, Libraries and Programs](#framework-libraries-and-programs)
@@ -295,12 +296,13 @@ The tasks can be found within the user stories here: <https://github.com/RenaSch
 - The homepage welcomes the user and reminds the user of a friendly with each other. 
 Then all the reviews are displayed with an image, the author, the creation date and an excerpt. 
 At the bottom the user can go to the next page or later on to the previous one.
+- The final project differs from the planned one. There is room for more features.
 
 ![Screen shot of the homepage](read-me-images/homepage.png)
 ![Screen shot of the homepage](read-me-images/next.png)
 ![Screen shot of the homepage](read-me-images/prev.png)
 
-### Details review page
+### Detailed review page
 
 - By clicking on the text of one specific review on the main homepage the user will be forwarded to the detailed page. 
 There next to an image, the title, the author, the creation date and the content and count of comments as well as the average rating
