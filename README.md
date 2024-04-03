@@ -493,7 +493,8 @@ Test results of files with custom written code:
 
 - **Lighthouse**
 
-![]()
+The results of the lighthouse testing are sufficient.
+![Screen shot of the lighthouse results](read-me-images/lighthouse.png)
 
 ### Unfixed bugs
 
