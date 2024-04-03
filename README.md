@@ -2,7 +2,7 @@
 
 Being interested in different board games, this Django challenge was an interesting experience. The site should attract all user liking board games and contributing to an open-minded exchange on them.
 
-View the live project here: <>
+View the live project here: <https://bg-review-p4-acb57fa06b77.herokuapp.com/>
 
 
 ## Table of content
@@ -438,16 +438,20 @@ Test results of files with custom written code:
 The deployment was done after the tutorial in the course content using <https://www.heroku.com/>, <https://cloudinary.com/>, <https://dbs.ci-dbs.net/> and <https://whitenoise.readthedocs.io/en/latest/>.
 
 For deployment:
+- Some libraries have to be installed:
+  - Gunicorn
+  - psycopg2
+  - Cloudinary
+  - Whitenoise
 - A Heroku account must be created.
 - Set your GitHub repository to public.
-- Create a new app in Heroku with the following settings:
-  - Add Python and Node.js (in this order!)
-  - Add PORT as key and 8000 as value
-- The Heroku App must be linked to the correct repo in GitHub
-- Choose Automatic Deploys for easier handling.
+- Create a new app and linked to the correct repo in GitHub while choosing Automatic Deploys for easier handling.
+- Create a database with Ci database Maker and link it in the project and the heroku app.
+- Hide sensitive information in the env.py with the .gitignore file and update the settings.py file.
+- Connect the project and Heroku app with Cloudinary.
 - Then deploy
  
-The link to the live page can be found here: [] (<>)
+The link to the live page can be found here: [Link to live page] (<https://bg-review-p4-acb57fa06b77.herokuapp.com/>)
 
 
 ## Credits
