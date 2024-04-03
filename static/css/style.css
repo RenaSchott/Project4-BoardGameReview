@@ -48,6 +48,10 @@ h1 {
     font-weight: 500;
 }
 
+.single_rev-image {
+    width: 75%;
+}
+
 .review_titles {
     margin: auto;
 }
