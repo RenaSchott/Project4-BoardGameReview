@@ -421,7 +421,19 @@ There is the possibility to integrate:
 
 | **Feature** | **Expect** | **Action** | **Result** |
 |---------------------|--------------------|--------------------------|------------------------------|
-|  |  |  |  |
+| next / previous button | User should be directed to the next or previous page | click on button | Redirection to previous or next page |
+| Login | User should be forwarded to signin page | click on button | Redirection to signin page |
+| Signin | User should be forwarded to homepage as login | fill in details and click on button | Redirection to homepage as logged in user |
+| Logout | User should be forwarded to confirmation page | click on button | Redirection to confirmation page |
+| Logout confirmation | User should be forwarded to homepage | click on button | Redirection to homepage |
+| Register | User should be forwarded to signup form | click on button | Redirection to signup form |
+| Signup | User should be forwarded to homepage as logged in user | fill in details and click on button | Redirection to homepage as logged in user |
+| View detailed review | the reviews on the main page should be clickable and a detailed review page should open | click on the review text | Redirection to specific review page |
+| Submit comment | User should be able to type in text and submit it | type and click on button | Textbox can be used and after clicking submission the comment can be seen as waiting for approval. |
+| Edit comment | User should be able to edit every comment they have written | login and click on button | Comments are editable |
+| Delete comment | User should be redirected to confirmation page | click on button | Redirction to confirmation page |
+| Deletion confirmation | User should be ask whether the want to return or delete the comment | click on button | Deletion and cancellation are fully functioning |
+
 
 
 ### Testing user stories
