@@ -44,15 +44,14 @@ def single_review(request, slug):
             )
 
     comment_form = CommentForm()
-    
-    return render(request, 'single_review.html',
-                {
+
+    return render(request, 'single_review.html', {
                     "review": review,
                     "comments": comments,
                     "comment_count": comment_count,
                     "comment_form": comment_form,
                     "ratings_count": ratings_count,
-                    "ratings_average": ratings_average,            
+                    "ratings_average": ratings_average,
             },)
 
 
@@ -74,7 +73,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('single_review', args=[slug]))
 
@@ -91,6 +91,7 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('single_review', args=[slug]))
