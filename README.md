@@ -404,7 +404,7 @@ There is the possibility to integrate:
 - **Validator W3**
 
 All sites tested - each result:
-![Screen shot one result of the testings](read-me-images/html-validation.png)
+![Screen shot of one result of the testings](read-me-images/html-validation.png)
 
 - **Validator W3C**
 
@@ -420,7 +420,8 @@ Test result:
 
 - **CI Python Linter**
 
-![]()
+Test results of files with custom written code:
+![Screen shot of one result of the testings](read-me-images/pep8.png)
 
 
 - **Lighthouse**
