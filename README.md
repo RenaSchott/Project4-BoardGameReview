@@ -417,7 +417,7 @@ There is the possibility to integrate:
 
 - The site was tested on different browsers: Chrome, Firefox and Safari.
 - I confirmed that the page is readable.
-- I confirmed that questions are functioning.
+- I confirmed that links are functioning.
 
 | **Feature** | **Expect** | **Action** | **Result** |
 |---------------------|--------------------|--------------------------|------------------------------|
@@ -428,14 +428,30 @@ There is the possibility to integrate:
 
 | **Expectation - User** | **Result**|
 |--------------|------------|
-| |  |
+|  I can view the reviews on the starting page so that I can select a specific one to read. | All reviews are shown on the homepage on different sites and are clickable. |
+| I can open a review so that I can read the full text. | The detailed review page opens and the content displays. |
+|  I can view the ratings on the starting page so that I can get an impression of the specific board game. | The ratings were moved. The average ratings and the amount of ratings can be seen on the review details page. |
+| I can use the search bar so that I can look for a specific board game. | A search bar is not included at the moment. |
+|  I can view the comments of other people so that I can get to know their opinion on the review. | Approved comments can be seen on the review details page. |
+|  I can comment on a review so that I can share my opinion on that. | Logged in users can comment on the reviews. |
+|  I can register an account so that I can add reviews and ratings. | Site users can register and add comments. Superusers can add reviews and ratings in the admin panel. |
+| I can create new reviews and ratings so that I can contribute to the sites grows. | A superuser can contribute to the sites grows via the admin panel. |
+| I can add my own reviews and ratings on already reviewed board games so that I can share my personal opinion. | A superuser can add reviews via the admin panel to share their opinion. |
+|  I can create, read, update and delete my reviews so that I can manage my contents. | A superuser can use all the CRUD fundtions in the admin panel and a normal user can use them on their comments. |
+
+
+**As the developer**
+
+| **Expectation - Administrator** | **Result**|
+|--------------|------------|
+|  I need to setup my project so I can create work on it. | The project setup worked. |
 
 
 **As the administrator**
 
 | **Expectation - Administrator** | **Result**|
 |--------------|------------|
-|  |  |
+|  I can manage the comments and reviews so that I can make sure that the site contributes to the grows of the community in a friendly and social way. | Via the admin panel everything can be managed. |
 
 
 ### Validator testing
